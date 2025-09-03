@@ -129,8 +129,8 @@ function ChartTooltipContent({
       value?: number | string;
       color?: string;
       dataKey?: string;
-      payload?: any;
-      [key: string]: any;
+      doc?: { fill?: string; [key: string]: unknown };
+      [key: string]: unknown;
     }>;
   }) {
   const { config } = useChart();
@@ -178,7 +178,7 @@ function ChartTooltipContent({
         {payload.map((item, index) => {
           const key = `${nameKey || item.name || item.dataKey || "value"}`;
           const itemConfig = getPayloadConfigFromPayload(config, item, key);
-          const indicatorColor = color || item.payload.fill || item.color;
+          const indicatorColor = color || item.doc?.fill || item.color;
 
           return (
             <div
@@ -189,7 +189,13 @@ function ChartTooltipContent({
               )}
             >
               {formatter && item?.value !== undefined && item.name ? (
-                formatter(item.value, item.name, item, index, item.payload)
+                formatter(
+                  item.value,
+                  item.name,
+                  item,
+                  index,
+                  item.doc ? [item.doc] : []
+                )
               ) : (
                 <>
                   {itemConfig?.icon ? (
@@ -257,7 +263,7 @@ function ChartLegendContent({
     color?: string;
     dataKey?: string;
     value?: string;
-    [key: string]: any;
+    [key: string]: unknown;
   }>;
   verticalAlign?: "top" | "bottom" | "middle";
   hideIcon?: boolean;
