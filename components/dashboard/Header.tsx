@@ -8,22 +8,73 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Bell, LogOut, Menu, Search, Settings, User } from "lucide-react";
+import {
+  Bell,
+  LogOut,
+  Menu,
+  Search,
+  Settings,
+  User,
+  Home,
+  BarChart3,
+  DollarSign,
+  Activity,
+  Target,
+  Users,
+} from "lucide-react";
 import { DateRangePicker } from "./DateRangePicker";
 import { ExportButton } from "./ExportButton";
 import { DateRange, DashboardData } from "@/types/dashboard";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { cn } from "@/lib/utils";
 
 interface HeaderProps {
   dateRange: DateRange;
   onDateRangeChange: (range: DateRange) => void;
   dashboardData: DashboardData;
+  activeTab: string;
+  onTabChange: (tab: string) => void;
 }
+
+const navigation = [
+  {
+    name: "Overview",
+    id: "overview",
+    icon: Home,
+  },
+  {
+    name: "Analytics",
+    id: "analytics",
+    icon: BarChart3,
+  },
+  {
+    name: "Revenue",
+    id: "revenue",
+    icon: DollarSign,
+  },
+  {
+    name: "Users",
+    id: "users",
+    icon: Users,
+  },
+  {
+    name: "Performance",
+    id: "performance",
+    icon: Activity,
+  },
+  {
+    name: "Goals",
+    id: "goals",
+    icon: Target,
+  },
+];
 
 export function Header({
   dateRange,
   onDateRangeChange,
   dashboardData,
+  activeTab,
+  onTabChange,
 }: HeaderProps) {
   const isMobile = useIsMobile();
 
@@ -82,6 +133,24 @@ export function Header({
       </SheetTrigger>
       <SheetContent className="bg-[#222831] px-4">
         <div className="flex flex-col space-y-4 mt-10">
+          <div className="space-y-1">
+            {navigation.map((item) => (
+              <Button
+                key={item.id}
+                variant={activeTab === item.id ? "secondary" : "ghost"}
+                className={cn(
+                  "w-full justify-start",
+                  activeTab === item.id
+                    ? "bg-blue-50 text-blue-700 hover:bg-blue-50"
+                    : "text-white hover:text-slate-900 hover:bg-slate-50"
+                )}
+                onClick={() => onTabChange(item.id)}
+              >
+                <item.icon className="mr-2 h-4 w-4" />
+                {item.name}
+              </Button>
+            ))}
+          </div>
           <DateRangePicker
             dateRange={dateRange}
             onDateRangeChange={onDateRangeChange}
