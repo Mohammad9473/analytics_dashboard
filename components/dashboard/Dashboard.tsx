@@ -164,10 +164,10 @@ export function Dashboard() {
   };
 
   return (
-    <div className="flex h-screen bg-slate-50">
+    <div className="flex h-screen bg-[#222831]">
       {/* Sidebar */}
       <div className="hidden md:flex md:w-64 md:flex-col">
-        <div className="flex flex-col flex-grow pt-5 bg-white border-r border-slate-200">
+        <div className="flex flex-col flex-grow pt-5 bg-[#343A40] border-r border-[#4F4FFF]">
           <Sidebar 
             activeTab={activeTab} 
             onTabChange={setActiveTab}
@@ -183,7 +183,7 @@ export function Dashboard() {
           dashboardData={mockDashboardData}
         />
         
-        <main className="flex-1 overflow-x-hidden overflow-y-auto bg-slate-50">
+        <main className="flex-1 overflow-x-hidden overflow-y-auto">
           <div id="dashboard-content" className="container mx-auto px-6 py-8">
             {renderContent()}
           </div>

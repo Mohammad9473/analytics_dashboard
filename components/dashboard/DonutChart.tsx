@@ -7,7 +7,7 @@ interface DonutChartProps {
   title: string;
 }
 
-const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'];
+const COLORS = ['#91B3FF', '#4FFF6F', '#f59e0b', '#FF0A0A', '#D5A1FF'];
 
 export function ConversionDonutChart({ data, title }: DonutChartProps) {
   // Determine if data is ConversionData or SalesData
@@ -35,9 +35,9 @@ export function ConversionDonutChart({ data, title }: DonutChartProps) {
   const dataKey = 'value';
 
   return (
-    <Card>
+    <Card className="bg-[#4F4FFF]">
       <CardHeader>
-        <CardTitle className="text-lg font-semibold text-slate-900">{title}</CardTitle>
+        <CardTitle className="text-lg font-semibold text-white">{title}</CardTitle>
       </CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={300}>

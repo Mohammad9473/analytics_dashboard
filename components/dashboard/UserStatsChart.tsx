@@ -15,9 +15,9 @@ export function UserStatsChart({ data }: UserStatsChartProps) {
   }));
 
   return (
-    <Card>
+    <Card className="bg-[#4F4FFF]">
       <CardHeader>
-        <CardTitle className="text-lg font-semibold text-slate-900">User Statistics (Last 7 Days)</CardTitle>
+        <CardTitle className="text-lg font-semibold text-white">User Statistics (Last 7 Days)</CardTitle>
       </CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={300}>
@@ -25,11 +25,11 @@ export function UserStatsChart({ data }: UserStatsChartProps) {
             <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
             <XAxis 
               dataKey="date" 
-              stroke="#64748b"
+              stroke="#FFF"
               fontSize={12}
             />
             <YAxis 
-              stroke="#64748b"
+              stroke="#FFF"
               fontSize={12}
             />
             <Tooltip 
@@ -44,13 +44,13 @@ export function UserStatsChart({ data }: UserStatsChartProps) {
             <Legend />
             <Bar 
               dataKey="newUsers" 
-              fill="#3b82f6" 
+              fill="#91B3FF" 
               name="New Users"
               radius={[2, 2, 0, 0]}
             />
             <Bar 
               dataKey="activeUsers" 
-              fill="#10b981" 
+              fill="#4FFF6F" 
               name="Active Users"
               radius={[2, 2, 0, 0]}
             />
