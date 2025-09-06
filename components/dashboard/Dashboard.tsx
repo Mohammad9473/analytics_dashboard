@@ -181,6 +181,8 @@ export function Dashboard() {
           dateRange={dateRange}
           onDateRangeChange={setDateRange}
           dashboardData={mockDashboardData}
+          activeTab={activeTab}
+          onTabChange={setActiveTab}
         />
         
         <main className="flex-1 overflow-x-hidden overflow-y-auto">
