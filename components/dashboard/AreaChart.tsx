@@ -17,9 +17,9 @@ export function UserActivityAreaChart({ data, title }: AreaChartProps) {
   }));
 
   return (
-    <Card>
+    <Card className="bg-[#4F4FFF]">
       <CardHeader>
-        <CardTitle className="text-lg font-semibold text-slate-900">{title}</CardTitle>
+        <CardTitle className="text-lg font-semibold text-white">{title}</CardTitle>
       </CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={300}>
@@ -33,11 +33,11 @@ export function UserActivityAreaChart({ data, title }: AreaChartProps) {
             <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
             <XAxis 
               dataKey="date" 
-              stroke="#64748b"
+              stroke="#FFF"
               fontSize={12}
             />
             <YAxis 
-              stroke="#64748b"
+              stroke="#FFF"
               fontSize={12}
             />
             <Tooltip 

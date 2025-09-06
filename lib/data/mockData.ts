@@ -98,11 +98,11 @@ export const mockDashboardData: DashboardData = {
   userStats: generateUserStats(),
   
   trafficSources: [
-    { source: 'Organic Search', visitors: 45230, percentage: 42.3, color: '#3b82f6' },
-    { source: 'Direct', visitors: 28450, percentage: 26.6, color: '#10b981' },
+    { source: 'Organic Search', visitors: 45230, percentage: 42.3, color: '#91B3FF' },
+    { source: 'Direct', visitors: 28450, percentage: 26.6, color: '#4FFF6F' },
     { source: 'Social Media', visitors: 18920, percentage: 17.7, color: '#f59e0b' },
-    { source: 'Email', visitors: 9840, percentage: 9.2, color: '#8b5cf6' },
-    { source: 'Referral', visitors: 4560, percentage: 4.2, color: '#ef4444' },
+    { source: 'Email', visitors: 9840, percentage: 9.2, color: '#D5A1FF' },
+    { source: 'Referral', visitors: 4560, percentage: 4.2, color: '#FF0A0A' },
   ],
   
   conversionFunnel: [
@@ -125,11 +125,11 @@ export const mockDashboardData: DashboardData = {
 
 // Additional data for different chart types
 export const salesByCategory = [
-  { name: 'Electronics', value: 35, color: '#3b82f6' },
-  { name: 'Clothing', value: 25, color: '#10b981' },
+  { name: 'Electronics', value: 35, color: '#91B3FF' },
+  { name: 'Clothing', value: 25, color: '#4FFF6F' },
   { name: 'Home & Garden', value: 20, color: '#f59e0b' },
-  { name: 'Sports', value: 12, color: '#8b5cf6' },
-  { name: 'Books', value: 8, color: '#ef4444' },
+  { name: 'Sports', value: 12, color: '#D5A1FF' },
+  { name: 'Books', value: 8, color: '#FF0A0A' },
 ];
 
 export const monthlyGrowth = [

@@ -58,7 +58,7 @@ export function Sidebar({ className, activeTab, onTabChange }: SidebarProps) {
             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
               <BarChart3 className="h-5 w-5 text-white" />
             </div>
-            <h2 className="text-lg font-semibold text-slate-900">Analytics Pro</h2>
+            <h2 className="text-lg font-semibold text-slate-900 text-white">Analytics Pro</h2>
           </div>
           <div className="space-y-1">
             {navigation.map((item) => (
@@ -69,7 +69,7 @@ export function Sidebar({ className, activeTab, onTabChange }: SidebarProps) {
                   "w-full justify-start",
                   activeTab === item.id 
                     ? "bg-blue-50 text-blue-700 hover:bg-blue-50" 
-                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                    : "text-white hover:text-slate-900 hover:bg-slate-50"
                 )}
                 onClick={() => onTabChange(item.id)}
               >
@@ -83,7 +83,7 @@ export function Sidebar({ className, activeTab, onTabChange }: SidebarProps) {
           <div className="space-y-1">
             <Button
               variant="ghost"
-              className="w-full justify-start text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+              className="w-full justify-start text-white hover:text-slate-900 hover:bg-slate-50"
             >
               <Settings className="mr-2 h-4 w-4" />
               Settings

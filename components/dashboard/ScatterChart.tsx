@@ -17,16 +17,16 @@ export function PerformanceScatterChart({ data, title }: ScatterChartProps) {
   }));
 
   const categoryColors = {
-    Performance: '#3b82f6',
-    Engagement: '#10b981',
+    Performance: '#91B3FF',
+    Engagement: '#4FFF6F',
     Reliability: '#f59e0b',
-    Support: '#8b5cf6'
+    Support: '#D5A1FF'
   };
 
   return (
-    <Card>
+    <Card className="bg-[#4F4FFF]">
       <CardHeader>
-        <CardTitle className="text-lg font-semibold text-slate-900">{title}</CardTitle>
+        <CardTitle className="text-lg font-semibold text-white">{title}</CardTitle>
       </CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={300}>
@@ -36,14 +36,14 @@ export function PerformanceScatterChart({ data, title }: ScatterChartProps) {
               type="number" 
               dataKey="x" 
               name="Current"
-              stroke="#64748b"
+              stroke="#FFF"
               fontSize={12}
             />
             <YAxis 
               type="number" 
               dataKey="y" 
               name="Target"
-              stroke="#64748b"
+              stroke="#FFF"
               fontSize={12}
             />
             <Tooltip 

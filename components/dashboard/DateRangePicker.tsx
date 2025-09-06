@@ -19,7 +19,7 @@ export function DateRangePicker({ dateRange, onDateRangeChange }: DateRangePicke
       <PopoverTrigger asChild>
         <Button
           variant="outline"
-          className="w-[280px] justify-start text-left font-normal"
+          className="w-[280px] justify-start text-left font-normal max-w-[100%]"
         >
           <CalendarIcon className="mr-2 h-4 w-4" />
           {dateRange?.from ? (

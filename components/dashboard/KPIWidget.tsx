@@ -30,9 +30,9 @@ export function KPIWidget({ data }: KPIWidgetProps) {
   const isPositive = data.changeType === 'increase';
 
   return (
-    <Card className="relative overflow-hidden">
+    <Card className="relative overflow-hidden bg-[#4F4FFF]">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-        <CardTitle className="text-sm font-medium text-slate-600">
+        <CardTitle className="text-sm font-medium text-white">
           {data.title}
         </CardTitle>
         <div className={`p-2 rounded-lg ${data.color}`}>
@@ -59,7 +59,7 @@ export function KPIWidget({ data }: KPIWidgetProps) {
             )}
             <span>{Math.abs(data.change)}%</span>
           </Badge>
-          <span className="text-xs text-slate-500">vs last month</span>
+          <span className="text-xs text-white">vs last month</span>
         </div>
       </CardContent>
     </Card>

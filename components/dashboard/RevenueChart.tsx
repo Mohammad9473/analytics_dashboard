@@ -8,9 +8,9 @@ interface RevenueChartProps {
 
 export function RevenueChart({ data }: RevenueChartProps) {
   return (
-    <Card>
+    <Card className="bg-[#4F4FFF]">
       <CardHeader>
-        <CardTitle className="text-lg font-semibold text-slate-900">Revenue Trends</CardTitle>
+        <CardTitle className="text-lg font-semibold text-white">Revenue Trends</CardTitle>
       </CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={300}>
@@ -18,11 +18,11 @@ export function RevenueChart({ data }: RevenueChartProps) {
             <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
             <XAxis 
               dataKey="month" 
-              stroke="#64748b"
+              stroke="#FFF"
               fontSize={12}
             />
             <YAxis 
-              stroke="#64748b"
+              stroke="#FFF"
               fontSize={12}
               tickFormatter={(value) => `$${value / 1000}k`}
             />
@@ -39,7 +39,7 @@ export function RevenueChart({ data }: RevenueChartProps) {
             <Line 
               type="monotone" 
               dataKey="revenue" 
-              stroke="#3b82f6" 
+              stroke="#FFF" 
               strokeWidth={3}
               dot={{ fill: '#3b82f6', strokeWidth: 2, r: 4 }}
               name="Revenue"
@@ -47,7 +47,7 @@ export function RevenueChart({ data }: RevenueChartProps) {
             <Line 
               type="monotone" 
               dataKey="profit" 
-              stroke="#10b981" 
+              stroke="#4FFF6F" 
               strokeWidth={3}
               dot={{ fill: '#10b981', strokeWidth: 2, r: 4 }}
               name="Profit"
@@ -55,7 +55,7 @@ export function RevenueChart({ data }: RevenueChartProps) {
             <Line 
               type="monotone" 
               dataKey="expenses" 
-              stroke="#ef4444" 
+              stroke="#FF0A0A" 
               strokeWidth={3}
               dot={{ fill: '#ef4444', strokeWidth: 2, r: 4 }}
               name="Expenses"
