@@ -164,7 +164,7 @@ export function Dashboard() {
   };
 
   return (
-    <div className="flex h-screen bg-[#222831]">
+    <div className="flex h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Sidebar */}
       <div className="hidden md:flex md:w-64 md:flex-col">
         <div className="flex flex-col flex-grow pt-5 bg-[#343A40] border-r border-[#4F4FFF]">

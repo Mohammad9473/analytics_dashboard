@@ -17,7 +17,7 @@ export function UserActivityAreaChart({ data, title }: AreaChartProps) {
   }));
 
   return (
-    <Card className="bg-[#4F4FFF]">
+    <Card className="glass-card">
       <CardHeader>
         <CardTitle className="text-lg font-semibold text-white">{title}</CardTitle>
       </CardHeader>
