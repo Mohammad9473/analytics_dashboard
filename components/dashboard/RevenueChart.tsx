@@ -8,7 +8,7 @@ interface RevenueChartProps {
 
 export function RevenueChart({ data }: RevenueChartProps) {
   return (
-    <Card className="bg-[#4F4FFF]">
+    <Card className="glass-card">
       <CardHeader>
         <CardTitle className="text-lg font-semibold text-white">Revenue Trends</CardTitle>
       </CardHeader>

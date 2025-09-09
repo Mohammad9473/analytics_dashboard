@@ -35,7 +35,7 @@ export function ConversionDonutChart({ data, title }: DonutChartProps) {
   const dataKey = 'value';
 
   return (
-    <Card className="bg-[#4F4FFF]">
+    <Card className="glass-card">
       <CardHeader>
         <CardTitle className="text-lg font-semibold text-white">{title}</CardTitle>
       </CardHeader>

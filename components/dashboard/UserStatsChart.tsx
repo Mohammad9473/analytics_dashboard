@@ -15,7 +15,7 @@ export function UserStatsChart({ data }: UserStatsChartProps) {
   }));
 
   return (
-    <Card className="bg-[#4F4FFF]">
+    <Card className="glass-card">
       <CardHeader>
         <CardTitle className="text-lg font-semibold text-white">User Statistics (Last 7 Days)</CardTitle>
       </CardHeader>

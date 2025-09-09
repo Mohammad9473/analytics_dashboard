@@ -30,7 +30,7 @@ export function KPIWidget({ data }: KPIWidgetProps) {
   const isPositive = data.changeType === 'increase';
 
   return (
-    <Card className="relative overflow-hidden bg-[#4F4FFF]">
+    <Card className="relative overflow-hidden glass-card">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <CardTitle className="text-sm font-medium text-white">
           {data.title}
@@ -40,7 +40,7 @@ export function KPIWidget({ data }: KPIWidgetProps) {
         </div>
       </CardHeader>
       <CardContent>
-        <div className="text-2xl font-bold text-slate-900 mb-2">
+        <div className="text-2xl font-bold text-white mb-2">
           {data.value}
         </div>
         <div className="flex items-center space-x-2">

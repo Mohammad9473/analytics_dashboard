@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -77,6 +78,7 @@ export function Header({
   onTabChange,
 }: HeaderProps) {
   const isMobile = useIsMobile();
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   const renderDesktopNav = () => (
     <div className="flex items-center space-x-4">
@@ -125,7 +127,7 @@ export function Header({
   );
 
   const renderMobileNav = () => (
-    <Sheet>
+    <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
       <SheetTrigger asChild>
         <Button variant="outline" size="icon">
           <Menu className="h-4 w-4" />
@@ -144,7 +146,10 @@ export function Header({
                     ? "bg-blue-50 text-blue-700 hover:bg-blue-50"
                     : "text-white hover:text-slate-900 hover:bg-slate-50"
                 )}
-                onClick={() => onTabChange(item.id)}
+                onClick={() => {
+                  onTabChange(item.id);
+                  setIsSheetOpen(false);
+                }}
               >
                 <item.icon className="mr-2 h-4 w-4" />
                 {item.name}
@@ -201,7 +206,7 @@ export function Header({
   );
 
   return (
-    <header className="border-b border-[#4F4FFF] bg-[#222831] px-6 py-4">
+    <header className="border-b border-[#4F4FFF] bg-[#343A40] px-6 py-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <h1 className="text-2xl font-bold text-white">Dashboard</h1>

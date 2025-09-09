@@ -8,7 +8,7 @@ interface TrafficSourceChartProps {
 
 export function TrafficSourceChart({ data }: TrafficSourceChartProps) {
   return (
-    <Card className="bg-[#4F4FFF]">
+    <Card className="glass-card">
       <CardHeader>
         <CardTitle className="text-lg font-semibold text-white">Traffic Sources</CardTitle>
       </CardHeader>
